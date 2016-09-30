@@ -1,0 +1,13 @@
+service: google-bug
+runtime: python-compat
+vm: true
+threadsafe: false
+api_version: '1'
+
+handlers:
+- script: app.app
+  url: .*
+
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 1
